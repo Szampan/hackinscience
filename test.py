@@ -1,7 +1,5 @@
-a = [1,1]
-b = [2,2]
+tab = [1,2,3,4,5,6,]
 
-if 1 not in a and 3 not in b:
-    print('ok')
-else:
-    print('nieok')
+
+a = 1 # czyli ma być jedynka i dwójka
+print(tab[a-1:a+1])

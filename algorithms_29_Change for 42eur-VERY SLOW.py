@@ -3,11 +3,14 @@ start_time = time.time()
 
 def changes(amount, coins):    
 
-    coins = sorted(list(coins), reverse=True)
+    coins = sorted(coins, reverse=True)
     possibilities = []
+    # possibilities = {}
+    
 
     def divide(sequence):
         print('Divide ', sequence)
+        # new_sequences = set()
         new_sequences = []
         tmp_coins = [i for i in coins if i < sequence[0]]
         for n in range(len(sequence)):
@@ -38,7 +41,10 @@ def changes(amount, coins):
                 
                 # print('new_seq: ', new_seq)
                 new_seq.sort(reverse = True)
-                if new_seq not in possibilities and new_seq not in new_sequences:    # można zrezygnować z tego ifa
+                # if new_seq not in possibilities:
+                #     new_sequences.update(new_seq)
+                
+                if new_seq not in possibilities and new_seq not in new_sequences: 
                     new_sequences.append(new_seq)
             
 
